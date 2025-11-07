@@ -1,0 +1,4 @@
+vs va 1 vl ./sub2.vl
+vs vl 0 vl ./sub1.vl
+vs vl 1 vl ./sub1.vl
+fr vg va 1 1 va 1

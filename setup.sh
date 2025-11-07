@@ -25,13 +25,13 @@ function vl_test () {
     test_dir=test_answer
   fi
 
-  if [ "$1" = "1" ] || [ "$1" = "" ]; then
+  if [ "$1" = "1" ] || [ "$1" = "" ] || [ "$1" = "answer" ]; then
     _vl_test_subject $test_dir/test1/main.vl "'Matcher株式会社' を出力しなさい"
     _vl_test_case $test_dir/test1/main.vl "" "Matcher株式会社"
     echo ""
   fi
 
-  if [ "$1" = "2" ] || [ "$1" = "" ]; then
+  if [ "$1" = "2" ] || [ "$1" = "" ] || [ "$1" = "answer" ]; then
     _vl_test_subject $test_dir/test2/main.vl "入力の2乗を出力しなさい"
     _vl_test_case $test_dir/test2/main.vl "3" "9"
     _vl_test_case $test_dir/test2/main.vl "0" "0"
@@ -39,14 +39,14 @@ function vl_test () {
     echo ""
   fi
 
-  if [ "$1" = "3" ] || [ "$1" = "" ]; then
+  if [ "$1" = "3" ] || [ "$1" = "" ] || [ "$1" = "answer" ]; then
     _vl_test_subject $test_dir/test3/main.vl "入力の名前を使って'私の名前は<name>です'を出力しなさい"
     _vl_test_case $test_dir/test3/main.vl "山田太郎" "私の名前は山田太郎です"
     _vl_test_case $test_dir/test3/main.vl "抹茶花子" "私の名前は抹茶花子です"
     echo ""
   fi
 
-  if [ "$1" = "4" ] || [ "$1" = "" ]; then
+  if [ "$1" = "4" ] || [ "$1" = "" ] || [ "$1" = "answer" ]; then
     _vl_test_subject $test_dir/test4/main.vl "入力が'りんご'の場合は'apple'、'ばなな'の場合は'banana'、それ以外の場合は'fruit'を出力しなさい"
     _vl_test_case $test_dir/test4/main.vl "りんご" "apple"
     _vl_test_case $test_dir/test4/main.vl "ばなな" "banana"
@@ -55,7 +55,7 @@ function vl_test () {
     echo ""
   fi
 
-  if [ "$1" = "5" ] || [ "$1" = "" ]; then
+  if [ "$1" = "5" ] || [ "$1" = "" ] || [ "$1" = "answer" ]; then
     _vl_test_subject $test_dir/test5/main.vl "入力の階乗を出力しなさい"
     _vl_test_case $test_dir/test5/main.vl "0" "1"
     _vl_test_case $test_dir/test5/main.vl "1" "1"
