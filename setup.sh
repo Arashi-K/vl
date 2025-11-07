@@ -5,17 +5,17 @@ function vl () {
 }
 
 function vl_samples () {
-  echo "====== sample1.vl ======"
+  echo "====== vl sample1.vl ======"
   vl samples/sample1.vl
-  echo "====== sample2.vl ======"
+  echo "====== vl sample2.vl ======"
   vl samples/sample2.vl
-  echo "====== sample3.vl ======"
+  echo "====== vl sample3.vl ======"
   vl samples/sample3.vl
-  echo "====== sample4.vl ======"
+  echo "====== vl sample4.vl ======"
   vl samples/sample4.vl
-  echo "====== sample5.vl ======"
+  echo "====== vl sample5.vl 2 2 ======"
   vl samples/sample5.vl 2 2
-  echo "====== sample6.vl ======"
+  echo "====== vl sample6.vl ./sample5.vl ======"
   vl samples/sample6.vl ./sample5.vl
 }
 
