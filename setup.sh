@@ -34,10 +34,22 @@ function vl_test () {
   _vl_test_case $test_dir/test2/main.vl "-2" "4"
   echo ""
 
-  _vl_test_subject $test_dir/test3/main.vl "入力の階乗を出力しなさい"
-  _vl_test_case $test_dir/test3/main.vl "0" "1"
-  _vl_test_case $test_dir/test3/main.vl "1" "1"
-  _vl_test_case $test_dir/test3/main.vl "4" "24"
+  _vl_test_subject $test_dir/test3/main.vl "入力の名前を使って'私の名前は<name>です'を出力しなさい"
+  _vl_test_case $test_dir/test3/main.vl "山田太郎" "私の名前は山田太郎です"
+  _vl_test_case $test_dir/test3/main.vl "抹茶花子" "私の名前は抹茶花子です"
+  echo ""
+
+  _vl_test_subject $test_dir/test4/main.vl "入力が'りんご'の場合は'apple'、'ばなな'の場合は'banana'、それ以外の場合は'fruit'を出力しなさい"
+  _vl_test_case $test_dir/test4/main.vl "りんご" "apple"
+  _vl_test_case $test_dir/test4/main.vl "ばなな" "banana"
+  _vl_test_case $test_dir/test4/main.vl "ぶどう" "fruit"
+  _vl_test_case $test_dir/test4/main.vl "れもん" "fruit"
+  echo ""
+
+  _vl_test_subject $test_dir/test5/main.vl "入力の階乗を出力しなさい"
+  _vl_test_case $test_dir/test5/main.vl "0" "1"
+  _vl_test_case $test_dir/test5/main.vl "1" "1"
+  _vl_test_case $test_dir/test5/main.vl "4" "24"
   echo ""
 }
 

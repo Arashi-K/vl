@@ -2,7 +2,7 @@
 
 ### installation
 ```bash
-$ ./setup.sh
+$ source setup.sh
 ```
 
 ### commands
