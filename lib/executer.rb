@@ -7,6 +7,7 @@ module Executer
       pipe = []
       register = {}
       lines.each do |line|
+        next if line.start_with?('#')
         tokens = str_ary_compact(line.split(/\s+/))
         pipe, _ = take(tokens, pipe, register, argv, working_dir)
       end
