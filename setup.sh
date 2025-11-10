@@ -66,10 +66,10 @@ function vl_test () {
   if [ "$1" = "6" ] || [ "$1" = "" ] || [ "$1" = "answer" ]; then
     _vl_test_subject $test_dir/test6/main.vl "入力の2つの数値のうち大きい方を出力しなさい"
     _vl_test_case $test_dir/test6/main.vl "14 12" "14"
-    _vl_test_case $test_dir/test6/main.vl "0 8" "8"
+    _vl_test_case $test_dir/test6/main.vl "0 8.2" "8.2"
     _vl_test_case $test_dir/test6/main.vl "5 -5" "5"
     _vl_test_case $test_dir/test6/main.vl "-3 0" "0"
-    _vl_test_case $test_dir/test6/main.vl "-4 -6" "-4"
+    _vl_test_case $test_dir/test6/main.vl "-4.4 -4.5" "-4.4"
     echo ""
   fi
 }
@@ -86,7 +86,7 @@ function _vl_test_case () {
   file_path=$1
   args=$2
   expect=$3
-  res=$(vl $file_path $args)
+  res=$(eval "vl $file_path $args")
   if [ "$expect" = "$res" ]; then
     color=32
   else
