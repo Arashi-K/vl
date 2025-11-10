@@ -1,6 +1,7 @@
 vs vl diff ns va 1 va 2
-vs vl minus_negative_diff sj vl - nm vl -1 vg vl diff
+vs vl negative_diff nm vl -1 vg vl diff
+vs vl minus_diff sj vl - vg vl diff
 
-vs vg vl minus_negative_diff va 1
-vs vg vl diff va 2
-vg vg vl minus_negative_diff
+vs vg vl minus_diff va 2
+vs vg vl negative_diff va 1
+vg vg vl minus_diff
