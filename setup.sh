@@ -62,6 +62,16 @@ function vl_test () {
     _vl_test_case $test_dir/test5/main.vl "4" "24"
     echo ""
   fi
+
+  if [ "$1" = "6" ] || [ "$1" = "" ] || [ "$1" = "answer" ]; then
+    _vl_test_subject $test_dir/test6/main.vl "入力の2つの数値のうち大きい方を出力しなさい"
+    _vl_test_case $test_dir/test6/main.vl "14 12" "14"
+    _vl_test_case $test_dir/test6/main.vl "0 8" "8"
+    _vl_test_case $test_dir/test6/main.vl "5 -5" "5"
+    _vl_test_case $test_dir/test6/main.vl "-3 0" "0"
+    _vl_test_case $test_dir/test6/main.vl "-4 -6" "-4"
+    echo ""
+  fi
 }
 
 function _vl_test_subject () {
